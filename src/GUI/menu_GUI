@@ -49,19 +49,20 @@ class HuffmanMenuApp(App):
         popup.open()
 
     def encode_text(self, instance):
-                """
-                Método para codificar el texto ingresado por el usuario sin caracteres repetidos.
-                """
-                try:
-                    text = self.text_input.text
-                    if len(set(text)) != len(text):
-                        raise ValueError("No se permiten caracteres repetidos en el texto.")
-                    
-                    encoded = self.huffman_coding.encode(text=text)
-                    self.result_output.text = f"Texto codificado: {encoded}"
-                    self.text_input.text = ""  # Limpiar el contenido del TextInput
-                except Exception as e:
-                    self.show_error_popup(str(e))
+        """
+        Método para codificar el texto ingresado por el usuario sin caracteres repetidos.
+        """
+        try:
+            text = self.text_input.text
+            if any(text[i] == text[i+1] == text[i+2] for i in range(len(text) - 2)):
+                raise ValueError("No se permiten más de 2 caracteres repetidos seguidos en el texto.")
+            
+            encoded = self.huffman_coding.encode(text=text)
+            self.result_output.text = f"Texto codificado: {encoded}"
+            self.text_input.text = ""  # Limpiar el contenido del TextInput
+        except Exception as e:
+            self.show_error_popup(str(e))
+    
             
 
     def decode_text(self, instance):

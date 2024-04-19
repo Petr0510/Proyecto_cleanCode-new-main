@@ -22,11 +22,11 @@ Para ejecutar el programa y codificar un texto, sigue los siguientes pasos:
 
 - Clona el repositorio o descarga los archivos del programa.
 
-    `git clone https://github.com/Petr0510/Proyecto_cleanCode-2.git`
+    `git clone https://github.com/Petr0510/Proyecto_cleanCode-new-main.git`
 
 - Abre una terminal en la carpeta donde se encuentran los archivos del programa.
 
-    `cd Proyecto_cleanCode-2`
+    `cd Proyecto_cleanCode-new-main`
 
 - Ejecuta el siguiente comando para iniciar el programa: 
 
