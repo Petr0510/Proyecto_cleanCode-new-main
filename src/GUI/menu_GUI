@@ -10,7 +10,7 @@ from logica.huffman_cleanCode import HuffmanCoding
 
 class HuffmanMenuApp(App):
     """
-    Clase de la aplicación Kivy para interactuar con Huffman Coding.
+    Clase de la aplicación Kivy para interactuar con Huffman Coding
     """
 
     def build(self):
